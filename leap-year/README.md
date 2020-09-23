@@ -1,0 +1,6 @@
+- multiple of 4 is a leap year
+- exception multiple of 100 is not a leap year
+- before year 1581 all the year multiple of 4 is a leap year
+- exception multiple of 400 is a leap year
+- the year before zero (0) are not leap year
+- the year zero (0) does not exist
