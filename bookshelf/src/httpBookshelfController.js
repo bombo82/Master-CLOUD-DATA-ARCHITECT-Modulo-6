@@ -10,6 +10,10 @@ class HttpBookshelfController {
             res.status(201)
                 .send(insertedBook)
         })
+
+        httpServer.get('/', (req, res) => {
+            res.send(bookshelfService.getAll())
+        })
     }
 }
 

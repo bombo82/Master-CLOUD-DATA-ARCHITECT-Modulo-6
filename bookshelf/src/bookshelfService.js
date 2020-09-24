@@ -16,6 +16,10 @@ class BookshelfService {
     get(id) {
         return this.repository.find(id)
     }
+
+    getAll() {
+        return this.repository.all()
+    }
 }
 
 module.exports = BookshelfService

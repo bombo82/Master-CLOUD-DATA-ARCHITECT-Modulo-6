@@ -31,6 +31,13 @@ describe('Bookshelf service should', () => {
         const id = 0
         bookshelfService.get(id).should.deep.equals({'title': 'Clean Code', 'author': 'Robert C. Martin', 'id': 0})
     })
+
+    it(`get all books`, () => {
+        bookshelfService.getAll().should.deep.equal([
+                {'title': 'Clean Code', 'author': 'Robert C. Martin', 'id': 1},
+                {'title': 'Extreme Programming Explained', 'author': 'Kent Beck', 'id': 2}
+            ])
+    })
 })
 
 class TestRepository {
@@ -42,5 +49,12 @@ class TestRepository {
 
     find(id) {
         return {'title': 'Clean Code', 'author': 'Robert C. Martin', 'id': 0}
+    }
+
+    all() {
+        return [
+            {'title': 'Clean Code', 'author': 'Robert C. Martin', 'id': 1},
+            {'title': 'Extreme Programming Explained', 'author': 'Kent Beck', 'id': 2}
+        ]
     }
 }
